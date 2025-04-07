@@ -33,7 +33,7 @@ stripes serve --okapi http://my-okapi.example.com:9130 --tenant my-tenant-id
 
 Other [modules](https://dev.folio.org/source-code/#client-side).
 
-See project [UIMS](https://issues.folio.org/browse/UIMS)
+See project [UIMS](https://folio-org.atlassian.net/browse/UIMS)
 at the [FOLIO issue tracker](https://dev.folio.org/guidelines/issue-tracker).
 
 Other FOLIO Developer documentation is at [dev.folio.org](https://dev.folio.org/)
