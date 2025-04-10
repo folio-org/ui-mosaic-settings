@@ -11,7 +11,7 @@
     "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
     "formatjs-compile": "stripes translate compile",
     "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\"",
-    "test": "jest --ci --coverage --config=jest.config.ts"
+    "test": "jest --ci --coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",

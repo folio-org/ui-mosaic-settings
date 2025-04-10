@@ -1,10 +1,8 @@
-import type { Config } from 'jest';
-import path from 'path';
-
+const path = require('path');
 const stripesConfig = require('@folio/jest-config-stripes');
 const acqConfig = require('@folio/stripes-acq-components/jest.config');
 
-const config: Config = {
+const config = {
   ...stripesConfig,
   collectCoverageFrom: [
     ...stripesConfig.collectCoverageFrom,
@@ -23,4 +21,4 @@ const config: Config = {
   ],
 };
 
-export default config;
+module.exports = config;
