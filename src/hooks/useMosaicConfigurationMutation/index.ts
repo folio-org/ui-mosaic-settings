@@ -1,0 +1,1 @@
+export { useMosaicConfigurationMutation } from './useMosaicConfigurationMutation';
