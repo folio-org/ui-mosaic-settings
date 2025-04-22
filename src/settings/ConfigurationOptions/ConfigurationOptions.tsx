@@ -25,9 +25,7 @@ const ConfigurationOptions: React.FC = () => {
     mutateAsync: mutateMosaicConfiguration,
   } = useMosaicConfigurationMutation();
 
-  const onSubmit = (values: MosaicConfiguration) => {
-    const config = values as MosaicConfiguration;
-
+  const onSubmit = (config: MosaicConfiguration) => {
     return mutateMosaicConfiguration({ config })
       .then(async () => {
         showCallout({ messageId: 'ui-mosaic-settings.sections.configuration-options.submit.success' });
@@ -45,7 +43,7 @@ const ConfigurationOptions: React.FC = () => {
     <ConfigurationOptionsForm
       onSubmit={onSubmit}
       initialValues={mosaicConfiguration || DEFAULT_INITIAL_VALUES}
-      isLoading={isLoading || isMutationLoading}
+      isLoading={Boolean(isLoading || isMutationLoading)}
     />
   );
 };

@@ -36,7 +36,7 @@ export const useOrderTemplates = (): UseOrderTemplatesResult => {
   return ({
     isFetching,
     isLoading,
-    orderTemplates: data?.orderTemplates || DEFAULT_DATA,
-    totalRecords: data?.totalRecords || 0,
+    orderTemplates: data?.orderTemplates ?? DEFAULT_DATA,
+    totalRecords: data?.totalRecords ?? 0,
   });
 };
