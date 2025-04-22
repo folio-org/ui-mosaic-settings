@@ -43,7 +43,7 @@ const ConfigurationOptions: React.FC = () => {
     <ConfigurationOptionsForm
       onSubmit={onSubmit}
       initialValues={mosaicConfiguration || DEFAULT_INITIAL_VALUES}
-      isLoading={Boolean(isLoading || isMutationLoading)}
+      isLoading={isLoading || isMutationLoading}
     />
   );
 };

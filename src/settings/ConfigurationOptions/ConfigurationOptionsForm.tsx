@@ -53,7 +53,7 @@ const ConfigurationOptionsForm = (props: FormRenderProps<MosaicConfiguration> & 
     orderTemplates,
   } = useOrderTemplates();
 
-  const isSubmitDisabled = Boolean(pristine || submitting);
+  const isSubmitDisabled = pristine || submitting;
   const paneTitle = intl.formatMessage({ id: 'ui-mosaic-settings.sections.configuration-options' });
 
   const renderHeader = useCallback((headerProps: PaneHeaderProps) => (
@@ -102,7 +102,7 @@ const ConfigurationOptionsForm = (props: FormRenderProps<MosaicConfiguration> & 
             <Col xs>
               <FieldSelectionFinal
                 dataOptions={dataOptions}
-                disabled={Boolean(isLoading || isOrderTemplatesLoading)}
+                disabled={isLoading || isOrderTemplatesLoading}
                 fullWidth
                 label={<FormattedMessage id="ui-mosaic-settings.sections.configuration-options.field.template" />}
                 name="defaultTemplateId"
