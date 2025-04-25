@@ -1,0 +1,1 @@
+export { useMosaicConfiguration } from './useMosaicConfiguration';

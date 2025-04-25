@@ -44,6 +44,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intl": "^7.1.5",
+    "react-query": "^3.39.3",
     "react-redux": "^8.0.5",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
@@ -58,6 +59,7 @@
     "@folio/stripes": "^10.0.0",
     "react": "^18.2.0",
     "react-intl": "^7.1.5",
+    "react-query": "^3.39.3",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   },
@@ -73,7 +75,10 @@
     ],
     "displayName": "ui-mosaic-settings.meta.title",
     "route": "/mosaic-settings",
-    "okapiInterfaces": {},
+    "okapiInterfaces": {
+      "mosaic": "1.0",
+      "order-templates": "1.0"
+    },
     "permissionSets": [
       {
         "permissionName": "settings.mosaic-settings.enabled",
@@ -87,7 +92,9 @@
         "permissionName": "ui-mosaic-settings.settings.view",
         "displayName": "Settings (Mosaic integration): View settings",
         "subPermissions": [
-          "settings.mosaic-settings.enabled"
+          "settings.mosaic-settings.enabled",
+          "mosaic.configuration.item.get",
+          "orders.order-templates.collection.get"
         ],
         "visible": true
       },
@@ -95,7 +102,9 @@
         "permissionName": "ui-mosaic-settings.settings.edit",
         "displayName": "Settings (Mosaic integration): View and edit settings",
         "subPermissions": [
-          "ui-mosaic-settings.settings.view"
+          "ui-mosaic-settings.settings.view",
+          "mosaic.configuration.item.post",
+          "mosaic.configuration.item.put"
         ],
         "visible": true
       }

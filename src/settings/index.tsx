@@ -1,5 +1,8 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import {
+  FormattedMessage,
+  useIntl,
+} from 'react-intl';
 
 import {
   CommandList,
@@ -9,7 +12,7 @@ import {
   Settings,
   SettingsProps,
 } from '@folio/stripes/smart-components';
-import { usePaneFocus } from '@folio/stripes-acq-components';
+import { TitleManager } from '@folio/stripes/core';
 
 type SettingsPages = SettingsProps['pages'];
 type MosaicIntegrationSettingsProps = {
@@ -26,18 +29,19 @@ const pages: SettingsPages = [
 ];
 
 export const MosaicIntegrationSettings: React.FC<MosaicIntegrationSettingsProps> = (props) => {
-  const { paneTitleRef } = usePaneFocus();
+  const intl = useIntl();
 
   return (
     <CommandList commands={defaultKeyboardShortcuts}>
-      <Settings
-        {...props}
-        navPaneWidth="25%"
-        paneTitle={<FormattedMessage id="ui-mosaic-settings.meta.title" />}
-        paneTitleRef={paneTitleRef}
-        pages={pages}
-        forceRender={0}
-      />
+      <TitleManager page={intl.formatMessage({ id: 'ui-mosaic-settings.document.settings.title' })}>
+        <Settings
+          {...props}
+          navPaneWidth="25%"
+          paneTitle={<FormattedMessage id="ui-mosaic-settings.meta.title" />}
+          pages={pages}
+          forceRender={0}
+        />
+      </TitleManager>
     </CommandList>
   );
 };
