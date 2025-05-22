@@ -1,4 +1,9 @@
 {
-    "meta.title": "Mosaic integration",
-    "sections.configuration-options": "Configuration options"
+    "meta.title": "Integração com o Mosaic",
+    "sections.configuration-options": "Opções de configuração",
+    "document.settings.title": "Configurações de integração do Mosaic",
+    "sections.configuration-options.description": "Você pode escolher o modelo de pedido padrão que será aplicado quando o Mosaic criar um pedido no FOLIO. Se um modelo for escolhido durante o pedido no Mosaic, ele substituirá esta seleção; se nenhum modelo for escolhido, este será aplicado. Você pode editar o modelo padrão nas configurações do pedido em \"Modelos de pedido\". Quando o Mosaic estiver configurado para recuperar modelos de pedido do FOLIO em tempo real, você pode optar por limitar os modelos recuperados por categoria. Para isso, selecione uma ou mais categorias no menu suspenso abaixo.",
+    "sections.configuration-options.field.template": "Selecione o modelo de pedido padrão",
+    "sections.configuration-options.submit.success": "As configurações de integração do Mosaic foram atualizadas com sucesso.",
+    "sections.configuration-options.submit.error": "As configurações de integração do Mosaic não foram atualizadas."
 }
