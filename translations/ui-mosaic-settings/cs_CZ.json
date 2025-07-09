@@ -1,4 +1,9 @@
 {
-    "meta.title": "Mosaic integration",
-    "sections.configuration-options": "Configuration options"
+    "meta.title": "Integrace systému Mosaic",
+    "sections.configuration-options": "Možnosti konfigurace",
+    "document.settings.title": "Nastavení integrace Mosaic",
+    "sections.configuration-options.description": "Můžete si vybrat výchozí šablonu objednávky, která se použije při vytváření objednávky v aplikaci Mosaic ve FOLIO. Pokud je při objednávání v aplikaci Mosaic vybrána šablona, ​​která tento výběr přepíše, a pokud není vybrána žádná šablona, ​​použije se tato. Výchozí šablonu můžete upravit v nastavení objednávky v části „Šablony objednávek“. Pokud je aplikace Mosaic nakonfigurována tak, aby načítala šablony objednávek z aplikace FOLIO v reálném čase, můžete se rozhodnout omezit počet načítaných šablon podle kategorie. Chcete-li to provést, vyberte jednu nebo více kategorií pomocí rozbalovací nabídky níže.",
+    "sections.configuration-options.field.template": "Vyberte výchozí šablonu objednávky",
+    "sections.configuration-options.submit.success": "Nastavení integrace Mosaic bylo úspěšně aktualizováno.",
+    "sections.configuration-options.submit.error": "Nastavení integrace Mosaic nebylo aktualizováno."
 }
