@@ -1,4 +1,9 @@
 {
-    "meta.title": "Mosaic integration",
-    "sections.configuration-options": "Configuration options"
+    "meta.title": "Mozaïek integratie",
+    "sections.configuration-options": "Configuratie-opties",
+    "document.settings.title": "Mosaic integratie-instellingen",
+    "sections.configuration-options.description": "U kunt de standaard bestelsjabloon kiezen die wordt toegepast wanneer Mosaic een bestelling aanmaakt in FOLIO. Als er tijdens het bestellen in Mosaic een sjabloon wordt gekozen, wordt deze selectie Overschreven, als er geen sjabloon is gekozen, wordt deze toegepast. U kunt de standaard sjabloon aanpassen in de bestelinstellingen onder \"Bestelsjablonen\". Wanneer Mosaic geconfigureerd is om in real-time bestelsjablonen van FOLIO op te halen, kunt u de sjablonen die worden opgehaald per categorie beperken. Selecteer hiervoor één of meer categorieën met de onderstaande dropdown.",
+    "sections.configuration-options.field.template": "Standaard bestelsjabloon selecteren",
+    "sections.configuration-options.submit.success": "Mosaic integratie-instellingen succesvol geüpdatet.",
+    "sections.configuration-options.submit.error": "Mosaic integratie-instellingen is niet geüpdatet."
 }
