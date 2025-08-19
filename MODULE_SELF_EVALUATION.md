@@ -1,5 +1,5 @@
 ## Administrative
-* [ ] Listed by the Product Council on [Functionality Evaluated by the PC](https://wiki.folio.org/display/PC/Functionality+Evaluated+by+the+PC) with a positive evaluation result.
+* [x] Listed by the Product Council on [Functionality Evaluated by the PC](https://wiki.folio.org/display/PC/Functionality+Evaluated+by+the+PC) with a positive evaluation result.
 
 ## Shared/Common
 * [x] Uses Apache 2.0 license
@@ -15,9 +15,9 @@
 * [x] Module only uses FOLIO interfaces already provided by previously accepted modules _e.g. a UI module cannot be accepted that relies on an interface only provided by a back end module that hasn't been accepted yet_
 * [ ] Must not depend on a FOLIO library that has not been approved through the TCR process
 * [x] Module gracefully handles the absence of third party systems or related configuration
-* [ ] Sonarqube hasn't identified any security issues, major code smells or excessive (>3%) duplication
+* [x] Sonarqube hasn't identified any security issues, major code smells or excessive (>3%) duplication
 * [x] Uses [officially supported](https://wiki.folio.org/display/TC/Officially+Supported+Technologies) build tools
-* [ ] Unit tests have 80% coverage or greater, and are based on [officially approved technologies](https://wiki.folio.org/display/TC/Officially+Supported+Technologies)
+* [x] Unit tests have 80% coverage or greater, and are based on [officially approved technologies](https://wiki.folio.org/display/TC/Officially+Supported+Technologies)
 
 ## Frontend
 * [ ] If provided, End-to-end tests must be written in an [officially approved technology](https://wiki.folio.org/display/TC/Officially+Supported+Technologies)
