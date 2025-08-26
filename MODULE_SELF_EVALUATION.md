@@ -13,7 +13,7 @@
 * [x] Sensitive and environment-specific information is not checked into git repository
 * [x] Module is written in a language and framework from the [officially approved technologies](https://wiki.folio.org/display/TC/Officially+Supported+Technologies) page
 * [x] Module only uses FOLIO interfaces already provided by previously accepted modules _e.g. a UI module cannot be accepted that relies on an interface only provided by a back end module that hasn't been accepted yet_
-* [ ] Must not depend on a FOLIO library that has not been approved through the TCR process
+* [x] Must not depend on a FOLIO library that has not been approved through the TCR process
 * [x] Module gracefully handles the absence of third party systems or related configuration
 * [x] Sonarqube hasn't identified any security issues, major code smells or excessive (>3%) duplication
 * [x] Uses [officially supported](https://wiki.folio.org/display/TC/Officially+Supported+Technologies) build tools
