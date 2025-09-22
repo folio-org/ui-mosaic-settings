@@ -8,6 +8,11 @@ import {
 
 import { MosaicIntegration } from './MosaicIntegration';
 
+jest.mock('@folio/stripes/core', () => ({
+  ...jest.requireActual('@folio/stripes/core'),
+  TitleManager: jest.fn(({ children }) => children),
+}));
+
 const defaultProps = {
   location: {} as unknown as Location,
 };
