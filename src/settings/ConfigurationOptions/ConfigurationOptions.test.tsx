@@ -16,6 +16,10 @@ import {
   useOrderTemplates,
 } from '../../hooks';
 
+jest.mock('@folio/stripes/core', () => ({
+  ...jest.requireActual('@folio/stripes/core'),
+  TitleManager: jest.fn(({ children }) => children),
+}));
 jest.mock('@folio/stripes-acq-components', () => ({
   ...jest.requireActual('@folio/stripes-acq-components'),
   useShowCallout: jest.fn(),
