@@ -1,4 +1,9 @@
 {
-    "meta.title": "Mosaic integration",
-    "sections.configuration-options": "Configuration options"
+    "meta.title": "Mosaic 集成",
+    "sections.configuration-options": "配置选项",
+    "document.settings.title": "Mosaic 集成设置",
+    "sections.configuration-options.description": "您可以选择在 Mosaic 中创建订单时应用的默认订单模板。如果在 Mosaic 中创建订单时选择了模板，则该模板将覆盖之前的选择；如果未选择模板，则将应用之前的模板。您可以在订单设置的“订单模板”下编辑默认模板。当 Mosaic 配置为实时从 FOLIO 检索订单模板时，您可以决定限制按类别检索的模板。为此，请使用下面的下拉菜单选择一个或多个类别。",
+    "sections.configuration-options.field.template": "选择默认订单模板",
+    "sections.configuration-options.submit.success": "Mosaic 集成设置已成功更新。",
+    "sections.configuration-options.submit.error": "Mosaic 集成设置未更新。"
 }
