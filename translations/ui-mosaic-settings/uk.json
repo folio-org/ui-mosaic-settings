@@ -1,4 +1,9 @@
 {
-    "meta.title": "Mosaic integration",
-    "sections.configuration-options": "Configuration options"
+    "meta.title": "Інтеграція з Mosaic",
+    "sections.configuration-options": "Параметри конфігурації",
+    "document.settings.title": "Налаштування інтеграції з Mosaic",
+    "sections.configuration-options.description": "Ви можете вибрати шаблон замовлення за замовчуванням, який застосовується під час створення замовлення з Mosaic у FOLIO. Якщо шаблон вже вибраний під час замовлення в Mosaic, то він замінить цей вибір; якщо ж жодного шаблону не вибрано, то буде застосовано цей. Ви можете редагувати шаблон за замовчуванням у налаштуваннях замовлення в розділі \"Шаблони замовлень\". Якщо Mosaic налаштовано на отримання шаблонів замовлень з FOLIO в режимі реального часу, ви можете обмежити кількість шаблонів, що отримуються, за категоріями. Для цього виберіть одну або кілька категорій за допомогою меню-випадайки нижче.",
+    "sections.configuration-options.field.template": "Вибрати шаблон замовлення за замовчуванням",
+    "sections.configuration-options.submit.success": "Налаштування інтеграції Mosaic успішно оновлено.",
+    "sections.configuration-options.submit.error": "Налаштування інтеграції Mosaic не оновлено."
 }
