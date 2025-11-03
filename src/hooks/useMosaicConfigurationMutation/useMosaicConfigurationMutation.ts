@@ -20,9 +20,7 @@ export const useMosaicConfigurationMutation = (): UseMosaicConfigurationMutation
     isLoading,
   } = useMutation({
     mutationFn: ({ config }: CreateMosaicConfigurationParams) => {
-      return config.id
-        ? ky.put(MOSAIC_CONFIGURATION_API, { json: config }).json<MosaicConfiguration>()
-        : ky.post(MOSAIC_CONFIGURATION_API, { json: config }).json<MosaicConfiguration>();
+      return ky.put(MOSAIC_CONFIGURATION_API, { json: config }).json<MosaicConfiguration>();
     },
   });
 

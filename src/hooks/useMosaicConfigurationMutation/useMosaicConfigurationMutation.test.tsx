@@ -17,7 +17,6 @@ import { useMosaicConfigurationMutation } from './useMosaicConfigurationMutation
 const config: Partial<MosaicConfiguration> = {
   defaultTemplateId: 'defaultTemplateId',
 };
-const postMock = jest.fn(() => ({ json: jest.fn() }));
 const putMock = jest.fn(() => ({ json: jest.fn() }));
 
 const queryClient = new QueryClient();
@@ -29,20 +28,11 @@ const wrapper = ({ children }) => (
 
 describe('useMosaicConfigurationMutation', () => {
   beforeEach(() => {
-    (useOkapiKy as jest.Mock).mockReturnValue({ post: postMock, put: putMock });
+    (useOkapiKy as jest.Mock).mockReturnValue({ put: putMock });
   });
 
   afterEach(() => {
     jest.clearAllMocks();
-  });
-
-  it('should create a new Mosaic configuration', async () => {
-    const { result } = renderHook(() => useMosaicConfigurationMutation(), { wrapper });
-
-    await result.current.mutateAsync({ config });
-    await waitFor(() => expect(result.current.isLoading).toBeFalsy());
-
-    expect(postMock).toHaveBeenCalledWith(MOSAIC_CONFIGURATION_API, { json: config });
   });
 
   it('should update existing Mosaic configuration', async () => {
