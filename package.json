@@ -103,7 +103,6 @@
         "displayName": "Settings (Mosaic integration): View and edit settings",
         "subPermissions": [
           "ui-mosaic-settings.settings.view",
-          "mosaic.configuration.item.post",
           "mosaic.configuration.item.put"
         ],
         "visible": true
