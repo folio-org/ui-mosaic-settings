@@ -2,7 +2,7 @@
     "meta.title": "Mosaic integration",
     "sections.configuration-options": "Opcje konfiguracji",
     "document.settings.title": "Mosaic integration settings",
-    "sections.configuration-options.description": "You are able to choose the default order template that is applied when Mosaic creates an order in FOLIO. If a template is chosen while ordering in Mosaic that will override this selection, if no template is chosen this one will be applied. You can edit the default template in order settings under \"Order templates\". When Mosaic is configured to retrieve order templates from FOLIO in real-time you can decide to limit the templates that are retrieved by category. To do this select one or more category with the dropdown below.",
+    "sections.configuration-options.description": "Możesz wybrać domyślny szablon zamówienia, który jest stosowany, gdy Mosaic tworzy zamówienie w FOLIO. Jeśli podczas zamawiania w Mosaic wybierzesz inny szablon, zastąpi on domyślny. Jeśli żaden szablon nie zostanie wybrany, zastosowany zostanie ten domyślny. Domyślny szablon można edytować w ustawieniach zamówienia w sekcji „Szablony zamówień”. Gdy Mosaic jest skonfigurowany do pobierania szablonów zamówień z Folio w czasie rzeczywistym, możesz ograniczyć pobierane szablonów według kategorii. Aby to zrobić, wybierz jedną lub więcej kategorii z listy rozwijanej poniżej.",
     "sections.configuration-options.field.template": "Wybierz domyślny szablon zamówienia",
     "sections.configuration-options.submit.success": "Mosaic integration settings successfully updated.",
     "sections.configuration-options.submit.error": "Ustawienia integracji z Mosaic nie zostały zaktualizowane."
