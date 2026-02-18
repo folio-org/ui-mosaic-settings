@@ -2,6 +2,8 @@
 
 ## 1.1.0 (IN PROGRESS)
 
+* [UIMS-6](https://folio-org.atlassian.net/browse/UIMS-6) Remove incorrect dropdown reference from ui-mosaic-settings description.
+
 ## [1.0.0](https://github.com/folio-org/ui-mosaic-settings/tree/v1.0.0) (2025-09-22)
 
 * [UIMS-2](https://folio-org.atlassian.net/browse/UIMS-2) Create `ui-mosaic-settings` repository.
