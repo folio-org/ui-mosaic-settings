@@ -2,7 +2,7 @@
     "meta.title": "Mosaic-Integration",
     "sections.configuration-options": "Konfigurationsoptionen",
     "document.settings.title": "Einstellungen für die Mosaic-Integration",
-    "sections.configuration-options.description": "You are able to choose the default order template that is applied when Mosaic creates an order in FOLIO. If a template is chosen while ordering in Mosaic that will override this selection, if no template is chosen this one will be applied. You can edit the default template in order settings under \"Order templates\". When Mosaic is configured to retrieve order templates from FOLIO in real-time you can decide to limit the templates that are retrieved by category. To do this select one or more category with the dropdown below.",
+    "sections.configuration-options.description": "You are able to choose the default order template that is applied when Mosaic creates an order in FOLIO. If a template is chosen while ordering in Mosaic that will override this selection, if no template is chosen this one will be applied. You can edit the default template in order settings under \"Order templates\".",
     "sections.configuration-options.field.template": "Standard-Bestellvorlage auswählen",
     "sections.configuration-options.submit.success": "Die Einstellungen für die Mosaic-Integration wurden erfolgreich aktualisiert.",
     "sections.configuration-options.submit.error": "Die Einstellungen für die Mosaic-Integrations wurden nicht aktualisiert."
