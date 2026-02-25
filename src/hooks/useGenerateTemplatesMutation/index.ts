@@ -1,0 +1,1 @@
+export { useGenerateTemplatesMutation } from './useGenerateTemplatesMutation';

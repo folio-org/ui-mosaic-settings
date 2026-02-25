@@ -1,4 +1,5 @@
 import { useQuery } from 'react-query';
+import type { UseQueryResult } from 'react-query';
 
 import {
   useOkapiKy,
@@ -17,10 +18,7 @@ interface OrderTemplatesResult {
   totalRecords: number;
 }
 
-interface UseOrderTemplatesResult extends OrderTemplatesResult {
-  isFetching: boolean,
-  isLoading: boolean,
-}
+type UseOrderTemplatesResult = OrderTemplatesResult & Omit<UseQueryResult, 'data'>;
 
 const DEFAULT_DATA: OrderTemplate[] = [];
 
@@ -33,19 +31,14 @@ export const useOrderTemplates = (): UseOrderTemplatesResult => {
     limit: LIMIT_MAX,
   };
 
-  const {
-    data,
-    isFetching,
-    isLoading,
-  } = useQuery({
+  const { data, ...rest } = useQuery({
     queryKey: [namespace],
     queryFn: ({ signal }) => ky.get(ORDER_TEMPLATES_API, { searchParams, signal }).json<OrderTemplatesResult>(),
   });
 
-  return ({
-    isFetching,
-    isLoading,
+  return {
     orderTemplates: data?.orderTemplates ?? DEFAULT_DATA,
     totalRecords: data?.totalRecords ?? 0,
-  });
+    ...rest,
+  };
 };

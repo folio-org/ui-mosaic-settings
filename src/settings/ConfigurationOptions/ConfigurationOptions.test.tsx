@@ -2,22 +2,25 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 
 import {
+  act,
   render,
   screen,
 } from '@folio/jest-config-stripes/testing-library/react';
 import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
 import { useShowCallout } from '@folio/stripes-acq-components';
-
-import ConfigurationOptions from './ConfigurationOptions';
+import { useStripes } from '@folio/stripes/core';
 
 import {
+  useGenerateTemplatesMutation,
   useMosaicConfiguration,
   useMosaicConfigurationMutation,
   useOrderTemplates,
 } from '../../hooks';
+import ConfigurationOptions from './ConfigurationOptions';
 
 jest.mock('@folio/stripes/core', () => ({
   ...jest.requireActual('@folio/stripes/core'),
+  IfPermission: jest.fn(({ children }) => children),
   TitleManager: jest.fn(({ children }) => children),
 }));
 jest.mock('@folio/stripes-acq-components', () => ({
@@ -26,6 +29,7 @@ jest.mock('@folio/stripes-acq-components', () => ({
 }));
 jest.mock('../../hooks', () => ({
   ...jest.requireActual('../../hooks'),
+  useGenerateTemplatesMutation: jest.fn(),
   useMosaicConfiguration: jest.fn(),
   useMosaicConfigurationMutation: jest.fn(),
   useOrderTemplates: jest.fn(),
@@ -49,10 +53,12 @@ const renderComponent = (props = {}) => render(
 );
 
 describe('ConfigurationOptions', () => {
+  const generateTemplatesMock = jest.fn(() => Promise.resolve());
   const mutateAsyncMock = jest.fn(() => Promise.resolve());
   const showCalloutMock = jest.fn();
 
   beforeEach(() => {
+    (useGenerateTemplatesMutation as jest.Mock).mockReturnValue({ mutateAsync: generateTemplatesMock });
     (useMosaicConfiguration as jest.Mock).mockReturnValue({ mosaicConfiguration });
     (useMosaicConfigurationMutation as jest.Mock).mockReturnValue({ mutateAsync: mutateAsyncMock });
     (useOrderTemplates as jest.Mock).mockReturnValue({ orderTemplates });
@@ -91,6 +97,33 @@ describe('ConfigurationOptions', () => {
 
     expect(showCalloutMock).toHaveBeenCalledWith({
       messageId: 'ui-mosaic-settings.sections.configuration-options.submit.error',
+      type: 'error',
+    });
+  });
+
+  it('should handle generate integration templates action', async () => {
+    renderComponent();
+
+    await act(async () => {
+      await userEvent.click(screen.getByRole('button', { name: /generate-integration-templates.label/ }));
+    });
+
+    expect(generateTemplatesMock).toHaveBeenCalled();
+    expect(showCalloutMock).toHaveBeenCalled();
+  });
+
+  it('should handle error on generate integration templates action', async () => {
+    generateTemplatesMock.mockRejectedValueOnce(new Error('Mutation failed'));
+
+    renderComponent();
+
+    await act(async () => {
+      await userEvent.click(screen.getByRole('button', { name: /generate-integration-templates.label/ }));
+    });
+
+    expect(generateTemplatesMock).toHaveBeenCalled();
+    expect(showCalloutMock).toHaveBeenCalledWith({
+      messageId: 'ui-mosaic-settings.sections.configuration-options.action.generate-integration-templates.error',
       type: 'error',
     });
   });
