@@ -3,7 +3,11 @@
   "document.settings.title": "Mosaic integration settings",
 
   "sections.configuration-options": "Configuration options",
-  "sections.configuration-options.description": "You are able to choose the default order template that is applied when Mosaic creates an order in FOLIO. If a template is chosen while ordering in Mosaic that will override this selection, if no template is chosen this one will be applied. You can edit the default template in order settings under \"Order templates\".",
+  "sections.configuration-options.action.generate-integration-templates.description": "Clicking this button will generate templates for you to use as the default for this integration. The organization record and order template that are created can still be edited as desired or deleted.",
+  "sections.configuration-options.action.generate-integration-templates.label": "Generate integration templates",
+  "sections.configuration-options.action.generate-integration-templates.success": "Integration templates generated successfully.",
+  "sections.configuration-options.action.generate-integration-templates.error": "Unable to generate templates. Please try again.",
+  "sections.configuration-options.selection.description": "You are able to choose the default order template that is applied when Mosaic creates an order in FOLIO. If a template is chosen while ordering in Mosaic that will override this selection, if no template is chosen this one will be applied. You can edit the order templates in order settings under \"Order templates\".",
   "sections.configuration-options.field.template": "Select default order template",
   "sections.configuration-options.submit.success": "Mosaic integration settings successfully updated.",
   "sections.configuration-options.submit.error": "Mosaic integration settings was not updated."

@@ -17,7 +17,10 @@ import {
   Row,
 } from '@folio/stripes/components';
 import type { PaneHeaderProps } from '@folio/stripes/components';
-import { TitleManager } from '@folio/stripes/core';
+import {
+  IfPermission,
+  TitleManager,
+} from '@folio/stripes/core';
 import stripesFinalForm, {
   FormRenderProps,
 } from '@folio/stripes/final-form';
@@ -26,11 +29,16 @@ import {
   usePaneFocus,
 } from '@folio/stripes-acq-components';
 
-import { useOrderTemplates } from '../../hooks';
-import type { MosaicConfiguration } from '../../types';
+import type {
+  MosaicConfiguration,
+  OrderTemplate,
+} from '../../types';
 
 interface ConfigurationOptionsFormOwnProps {
   isLoading: boolean;
+  isOrderTemplatesLoading: boolean;
+  onGenerateTemplates: () => void;
+  orderTemplates: OrderTemplate[];
 }
 
 const ConfigurationOptionsForm = (props: FormRenderProps<MosaicConfiguration> & ConfigurationOptionsFormOwnProps) => {
@@ -38,6 +46,9 @@ const ConfigurationOptionsForm = (props: FormRenderProps<MosaicConfiguration> & 
     form,
     handleSubmit,
     isLoading,
+    isOrderTemplatesLoading,
+    onGenerateTemplates,
+    orderTemplates,
   } = props;
 
   const intl = useIntl();
@@ -47,11 +58,6 @@ const ConfigurationOptionsForm = (props: FormRenderProps<MosaicConfiguration> & 
     pristine,
     submitting,
   } = form.getState();
-
-  const {
-    isLoading: isOrderTemplatesLoading,
-    orderTemplates,
-  } = useOrderTemplates();
 
   const isSubmitDisabled = pristine || submitting;
   const paneTitle = intl.formatMessage({ id: 'ui-mosaic-settings.sections.configuration-options' });
@@ -95,7 +101,7 @@ const ConfigurationOptionsForm = (props: FormRenderProps<MosaicConfiguration> & 
     >
       <TitleManager record={paneTitle}>
         <Layout className="padding-bottom-gutter">
-          <FormattedMessage id="ui-mosaic-settings.sections.configuration-options.description" />
+          <FormattedMessage id="ui-mosaic-settings.sections.configuration-options.selection.description" />
         </Layout>
         <form id="exchange-rate-source-settings-form">
           <Row>
@@ -110,6 +116,20 @@ const ConfigurationOptionsForm = (props: FormRenderProps<MosaicConfiguration> & 
               />
             </Col>
           </Row>
+
+          <IfPermission perm="mosaic.template.item.post">
+            <p>
+              <FormattedMessage id="ui-mosaic-settings.sections.configuration-options.action.generate-integration-templates.description" />
+            </p>
+            <Button
+              buttonStyle="primary"
+              disabled={isLoading || isOrderTemplatesLoading}
+              onClick={onGenerateTemplates}
+              marginBottom0
+            >
+              <FormattedMessage id="ui-mosaic-settings.sections.configuration-options.action.generate-integration-templates.label" />
+            </Button>
+          </IfPermission>
         </form>
       </TitleManager>
     </Pane>
