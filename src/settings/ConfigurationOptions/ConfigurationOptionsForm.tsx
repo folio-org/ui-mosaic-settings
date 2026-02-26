@@ -101,7 +101,7 @@ const ConfigurationOptionsForm = (props: FormRenderProps<MosaicConfiguration> & 
     >
       <TitleManager record={paneTitle}>
         <Layout className="padding-bottom-gutter">
-          <FormattedMessage id="ui-mosaic-settings.sections.configuration-options.description" />
+          <FormattedMessage id="ui-mosaic-settings.sections.configuration-options.selection.description" />
         </Layout>
         <form id="exchange-rate-source-settings-form">
           <Row>
