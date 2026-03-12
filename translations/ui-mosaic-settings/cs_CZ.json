@@ -2,8 +2,12 @@
     "meta.title": "Integrace systému Mosaic",
     "sections.configuration-options": "Možnosti konfigurace",
     "document.settings.title": "Nastavení integrace Mosaic",
-    "sections.configuration-options.description": "Můžete si vybrat výchozí šablonu objednávky, která se použije při vytváření objednávky v aplikaci Mosaic ve FOLIO. Pokud je při objednávání v aplikaci Mosaic vybrána šablona, ​​která tento výběr přepíše, a pokud není vybrána žádná šablona, ​​použije se tato. Výchozí šablonu můžete upravit v nastavení objednávky v části „Šablony objednávek“. Pokud je aplikace Mosaic nakonfigurována tak, aby načítala šablony objednávek z aplikace FOLIO v reálném čase, můžete se rozhodnout omezit počet načítaných šablon podle kategorie. Chcete-li to provést, vyberte jednu nebo více kategorií pomocí rozbalovací nabídky níže.",
     "sections.configuration-options.field.template": "Vyberte výchozí šablonu objednávky",
     "sections.configuration-options.submit.success": "Nastavení integrace Mosaic bylo úspěšně aktualizováno.",
-    "sections.configuration-options.submit.error": "Nastavení integrace Mosaic nebylo aktualizováno."
+    "sections.configuration-options.submit.error": "Nastavení integrace Mosaic nebylo aktualizováno.",
+    "sections.configuration-options.action.generate-integration-templates.description": "Kliknutím na toto tlačítko se vygenerují šablony, které můžete použít jako výchozí pro tuto integraci. Vytvořený záznam organizace a šablonu objednávky lze i nadále libovolně upravovat nebo odstraňovat.",
+    "sections.configuration-options.action.generate-integration-templates.label": "Generování integračních šablon",
+    "sections.configuration-options.action.generate-integration-templates.success": "Integrační šablony byly úspěšně vygenerovány.",
+    "sections.configuration-options.action.generate-integration-templates.error": "Nelze vygenerovat šablony. Zkuste to prosím znovu.",
+    "sections.configuration-options.selection.description": "Můžete si vybrat výchozí šablonu objednávky, která se použije při vytváření objednávky v aplikaci FOLIO. Pokud je při objednávání v aplikaci Mosaic vybrána šablona, která tento výběr přepíše, pokud není vybrána žádná šablona, použije se tato. Šablony objednávek můžete upravovat v nastavení objednávek v části \"Šablony objednávek\"."
 }
