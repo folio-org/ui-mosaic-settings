@@ -6,8 +6,8 @@
     "sections.configuration-options.submit.success": "Налаштування інтеграції Mosaic успішно оновлено.",
     "sections.configuration-options.submit.error": "Налаштування інтеграції Mosaic не оновлено.",
     "sections.configuration-options.action.generate-integration-templates.description": "Clicking this button will generate templates for you to use as the default for this integration. The organization record and order template that are created can still be edited as desired or deleted.",
-    "sections.configuration-options.action.generate-integration-templates.label": "Generate integration templates",
-    "sections.configuration-options.action.generate-integration-templates.success": "Integration templates generated successfully.",
-    "sections.configuration-options.action.generate-integration-templates.error": "Unable to generate templates. Please try again.",
-    "sections.configuration-options.selection.description": "You are able to choose the default order template that is applied when Mosaic creates an order in FOLIO. If a template is chosen while ordering in Mosaic that will override this selection, if no template is chosen this one will be applied. You can edit the order templates in order settings under \"Order templates\"."
+    "sections.configuration-options.action.generate-integration-templates.label": "Генерування шаблонів інтеграції",
+    "sections.configuration-options.action.generate-integration-templates.success": "Шаблони інтеграції успішно згенеровано.",
+    "sections.configuration-options.action.generate-integration-templates.error": "Не вдалося згенерувати шаблони. Спробуйте ще раз.",
+    "sections.configuration-options.selection.description": "Ви можете вибрати шаблон замовлення за замовчуванням, який застосовується під час створення замовлення з Mosaic у FOLIO. Якщо шаблон вже вибраний під час замовлення в Mosaic, то він замінить цей вибір; якщо ж жодного шаблону не вибрано, то буде застосовано цей. Ви можете редагувати шаблони замовлень у налаштуваннях замовлення в розділі \"Шаблони замовлень\"."
 }
