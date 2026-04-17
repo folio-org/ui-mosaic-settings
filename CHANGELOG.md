@@ -1,6 +1,9 @@
 # Change history for ui-mosaic-settings
 
-## 1.1.0 (IN PROGRESS)
+## 1.2.0 (IN PROGRESS)
+
+## [1.1.0](https://github.com/folio-org/ui-mosaic-settings/tree/v1.1.0) (2026-04-17)
+[Full Changelog](https://github.com/folio-org/ui-mosaic-settings/compare/v1.0.0...v1.1.0)
 
 * [UIMS-6](https://folio-org.atlassian.net/browse/UIMS-6) Remove incorrect dropdown reference from ui-mosaic-settings description.
 * [UIMS-7](https://folio-org.atlassian.net/browse/UIMS-7) Add button to the configuration options settings for default templates generating.
