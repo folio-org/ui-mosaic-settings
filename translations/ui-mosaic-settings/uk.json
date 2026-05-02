@@ -5,7 +5,7 @@
     "sections.configuration-options.field.template": "Вибрати шаблон замовлення за замовчуванням",
     "sections.configuration-options.submit.success": "Налаштування інтеграції Mosaic успішно оновлено.",
     "sections.configuration-options.submit.error": "Налаштування інтеграції Mosaic не оновлено.",
-    "sections.configuration-options.action.generate-integration-templates.description": "Clicking this button will generate templates for you to use as the default for this integration. The organization record and order template that are created can still be edited as desired or deleted.",
+    "sections.configuration-options.action.generate-integration-templates.description": "Натискання на цю кнопку, створить шаблони для використання за замовчуванням для цієї інтеграції. В результаті, створені після цього запис організації та шаблон замовлення можна буде редагувати або видаляти за потребою.",
     "sections.configuration-options.action.generate-integration-templates.label": "Генерування шаблонів інтеграції",
     "sections.configuration-options.action.generate-integration-templates.success": "Шаблони інтеграції успішно згенеровано.",
     "sections.configuration-options.action.generate-integration-templates.error": "Не вдалося згенерувати шаблони. Спробуйте ще раз.",
