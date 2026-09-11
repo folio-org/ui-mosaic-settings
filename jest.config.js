@@ -1,8 +1,8 @@
-const path = require('path');
-const stripesConfig = require('@folio/jest-config-stripes');
+const path = require('node:path');
+const { config: stripesConfig } = require('@folio/jest-config-stripes');
 const acqConfig = require('@folio/stripes-acq-components/jest.config');
 
-const config = {
+module.exports = {
   ...stripesConfig,
   collectCoverageFrom: [
     ...stripesConfig.collectCoverageFrom,
@@ -20,5 +20,3 @@ const config = {
     path.join(__dirname, './test/jest/setupFiles.ts'),
   ],
 };
-
-module.exports = config;
