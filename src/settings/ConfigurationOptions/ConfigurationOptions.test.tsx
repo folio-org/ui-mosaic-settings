@@ -8,7 +8,6 @@ import {
 } from '@folio/jest-config-stripes/testing-library/react';
 import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
 import { useShowCallout } from '@folio/stripes-acq-components';
-import { useStripes } from '@folio/stripes/core';
 
 import {
   useGenerateTemplatesMutation,
